@@ -158,10 +158,13 @@ $(document).ready(function () {
         var gameQuestions = [];
         var currQuestion;
         var qCnt = 0;
+        var timerCnt = 30;
+        var timer;
 
         //
         var main = $('#game-container');
         var title = $('#title');
+        var timerOut = $('#timer-val');
         var questionDiv = $('<div>');
 
         //
@@ -191,12 +194,15 @@ $(document).ready(function () {
 
         function startGame() {
             qCnt = 0;
+            timerCnt = 30;
+            timerDisplay(timerCnt);
             main.empty();
             title.addClass("smaller");
             buildQuestion();
         }
 
         function buildQuestion() {
+            //
             var color = { a: 'primary', b: 'warning', c: 'danger', d: 'success' };
             var obj = gameQuestions[qCnt++];
             currQuestion = obj;
@@ -229,6 +235,8 @@ $(document).ready(function () {
             questionDiv.append(qTxt);
             questionDiv.append(row);
             main.append(questionDiv);
+            //
+            startTimer();
         }
 
         function answerBtn(e) {
@@ -243,19 +251,44 @@ $(document).ready(function () {
 
         function correct() {
             console.log('CORRECT');
+            stopTimer();
             resetQuestion();
             buildQuestion();
         }
 
         function incorrect() {
             console.log('WRONG');
+            stopTimer();
             resetQuestion();
             buildQuestion();
         }
 
         function resetQuestion(){
+            stopTimer();
+            timerCnt = 30;
+            timerDisplay(timerCnt);
             questionDiv.empty();
             main.empty();
+        }
+
+        //
+        function startTimer(){
+            timer  = setInterval(countdown,1000);
+        }
+
+        function stopTimer(){
+            clearInterval(timer);
+        }
+
+        function countdown(){
+            timerDisplay(--timerCnt);
+            if(timerCnt === 0){
+                incorrect();
+            }
+        }
+
+        function timerDisplay(str){
+            timerOut.text(str);
         }
 
 

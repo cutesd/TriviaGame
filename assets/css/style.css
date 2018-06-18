@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css?family=Bad+Script|Comfortaa|Fredericka+the+Great|Handlee|Indie+Flower|Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700|Fredericka+the+Great|Handlee');
 
 html, body{
     width:100%;
@@ -9,7 +9,7 @@ html, body{
 body{
     background-color:#FF0084;
     background: url(../images/hp-bg.jpg);
-    font-family: 'Handlee',sans-serif;
+    font-family: 'Comfortaa',sans-serif;
     color:#565264;
     display: flex;
     justify-content: center;
@@ -27,6 +27,15 @@ h1{
 h3{
     text-align:center;
     margin-top:1rem;
+    font-size: 1.5rem;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+.bold{
+    font-weight:700;
 }
 
 .col-md-6{
@@ -43,6 +52,7 @@ h3{
 }
 
 .q-text{
+    font-family: 'Handlee',sans-serif;
     font-size: 2.1rem;
     line-height:1;
 }
@@ -52,7 +62,7 @@ h3{
 }
 
 .small {
-    font-size: 55%;
+    font-size: 1rem;
 }
 
 #box {
@@ -70,6 +80,17 @@ h3{
     max-height: 400px;
     text-align: center;
 }
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 
 .outside-border{
     border: 25px solid #FEF6F7;
@@ -110,17 +131,6 @@ h3{
       100% {
           background-position: 0% 50%;
       }
-  }
-
-  .no-gutters {
-    margin-right: 0;
-    margin-left: 0;
-  
-    > .col,
-    > [class*="col-"] {
-      padding-right: 0;
-      padding-left: 0;
-    }
   }
 
   @media screen and (max-width: 992px){
