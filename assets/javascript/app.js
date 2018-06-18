@@ -217,6 +217,7 @@ $(document).ready(function () {
             main.append(h51);
             main.append(h52);
             main.append(h53);
+            playBtn.text('Play Again?');
             init();
         }
 
