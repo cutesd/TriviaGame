@@ -29,6 +29,32 @@ h3{
     margin-top:1rem;
 }
 
+.col-md-6{
+    margin-bottom: 0.5rem;
+}
+
+.btn-secondary {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.btn-block{
+    width: 98%;
+}
+
+.q-text{
+    font-size: 2.1rem;
+    line-height:1;
+}
+
+.smaller {
+    font-size: 3rem;
+}
+
+.small {
+    font-size: 55%;
+}
+
 #box {
     display: flex;
     align-items: center;
@@ -40,7 +66,9 @@ h3{
 
 #game-container {
     width: 85%;
-    height: 300px;
+    min-height: 300px;
+    max-height: 400px;
+    text-align: center;
 }
 
 .outside-border{
@@ -82,5 +110,16 @@ h3{
       100% {
           background-position: 0% 50%;
       }
+  }
+
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
   

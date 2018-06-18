@@ -43,183 +43,224 @@ $(document).ready(function () {
                 },
                 correctAnswer: "a"
             },
-     {
-                question: "",
+            {
+                question: "But everyone knows it's the Dark Arts he fancies. He's been after Quirrell's job for years.",
                 answers: {
-                    a: "",
-                    b: "",
-                    c: "",
-                    d: ""
+                    a: "Fred Weasley",
+                    b: "Ron Weasley",
+                    c: "Percy Weasley",
+                    d: "Hermione Granger"
                 },
-                correctAnswer: ""
+                correctAnswer: "c"
             },
-    5. 'But everyone knows it's the Dark Arts he fancies. He's been after Quirrell's job for years.'
-    
-     Fred Weasley
-     Ron Weasley
-     Percy Weasley
-     Hermione Granger
-     /*{
-                question: "",
+            {
+                question: "Have you heard? Harry Potter's the new Seeker for Gryffindor. I always knew he'd do well.",
                 answers: {
-                    a: "",
-                    b: "",
-                    c: "",
-                    d: ""
+                    a: "Professor Dumbledore",
+                    b: "Rubeus Hagrid",
+                    c: "Argus Filch",
+                    d: "Nearly Headless Nick"
                 },
-                correctAnswer: ""
+                correctAnswer: "d"
             },
-    6. 'Have you heard? Harry Potter's the new Seeker for Gryffindor. I always knew he'd do well.'
-    
-     Professor Dumbledore
-     Rubeus Hagrid
-     Argus Filch
-     Nearly Headless Nick
-     {
-                question: "",
+            {
+                question: "Stop, stop, stop, stop! You're going to take someone's eye out.",
                 answers: {
-                    a: "",
-                    b: "",
-                    c: "",
-                    d: ""
+                    a: "Neville Longbottom",
+                    b: "Ron Weasley",
+                    c: "Hermione Granger",
+                    d: "Harry Potter"
                 },
-                correctAnswer: ""
+                correctAnswer: "c"
             },
-    7. 'Stop, stop, stop, stop! You're going to take someone's eye out.'
-    
-     Neville Longbottom
-     Ron Weasley
-     Hermione Granger
-     Harry Potter
-     {
-                question: "",
+            {
+                question: "It shows nothing more or less than the deepest and most desperate desires of our hearts.",
                 answers: {
-                    a: "",
-                    b: "",
-                    c: "",
-                    d: ""
+                    a: "Rubeus Hagrid",
+                    b: "Albus Dumbledore",
+                    c: "Minerva McGonagall",
+                    d: "Severus Snape"
                 },
-                correctAnswer: ""
+                correctAnswer: "b"
             },
-    8. 'It shows nothing more or less than the deepest and most desperate desires of our hearts.'
-    
-    Answer: 
-     ( One Word, last name only)
-    9. 'Sorry, don't mean to be rude, but I'm in no fit state to entertain today.'
-    
-     Nearly Headless Nick
-     Percy Weasley
-     Hermione Granger
-     Hagrid
-     {
-                question: "",
+            {
+                question: "Sorry, don't mean to be rude, but I'm in no fit state to entertain today.",
                 answers: {
-                    a: "",
-                    b: "",
-                    c: "",
-                    d: ""
+                    a: "Nearly Headless Nick",
+                    b: "Percy Weasley",
+                    c: "Hermione Granger",
+                    d: "Hagrid"
                 },
-                correctAnswer: ""
+                correctAnswer: "d"
             },
-    10. 'God, I miss the screaming.'
-    
-     Argus Filch
-     Professor Snape
-     Rubeus Hagrid
-     Draco Malfoy
-     {
-                question: "",
+            {
+                question: "God, I miss the screaming.",
                 answers: {
-                    a: "",
-                    b: "",
-                    c: "",
-                    d: ""
+                    a: "Argus Filch",
+                    b: "Professor Snape",
+                    c: "Rubeus Hagrid",
+                    d: "Draco Malfoy"
                 },
-                correctAnswer: ""
+                correctAnswer: "a"
             },
-    11. 'You're a little bit scary sometimes you know, brilliant but scary.'
-    
-     Harry Potter
-     Hermione Granger
-     Neville Longbottom
-     Ron Weasley
-     {
-                question: "",
+            {
+                question: "You're a little bit scary sometimes you know, brilliant but scary.",
                 answers: {
-                    a: "",
-                    b: "",
-                    c: "",
-                    d: ""
+                    a: "Harry Potter",
+                    b: "Hermione Granger",
+                    c: "Neville Longbottom",
+                    d: "Ron Weasley"
                 },
-                correctAnswer: ""
+                correctAnswer: "d"
             },
-    12. 'Doesn't it seem a bit quiet to you?'
-    
-     Rubeus Hagrid
-     Ron Weasley
-     Harry Potter
-     Hermione Granger
-     {
-                question: "",
+            {
+                question: "Doesn't it seem a bit quiet to you?",
                 answers: {
-                    a: "",
-                    b: "",
-                    c: "",
-                    d: ""
+                    a: "Rubeus Hagrid",
+                    b: "Ron Weasley",
+                    c: "Harry Potter",
+                    d: "Hermione Granger"
                 },
-                correctAnswer: ""
+                correctAnswer: "c"
             },
-    13. 'You don't suppose this is going to be like real Wizard's Chess, do you?'
-     {
-                question: "",
+            {
+                question: "You don't suppose this is going to be like real Wizard's Chess, do you?",
                 answers: {
-                    a: "",
-                    b: "",
-                    c: "",
-                    d: ""
+                    a: "Hermoine Granger",
+                    b: "Ron Weasley",
+                    c: "Harry Potter",
+                    d: "Neville Longbottom"
                 },
-                correctAnswer: ""
+                correctAnswer: "b"
             },
-    Answer: 
-     ( Two Words, first and last name)
-    14. 'Books and cleverness, there are more important things, like friendship and bravery.'
-    
-     Albus Dumbledore
-     Hermione Granger
-     Ron Weasley
-     Minerva McGonagall
-     {
-                question: "",
+            {
+                question: "Books and cleverness, there are more important things, like friendship and bravery.",
                 answers: {
-                    a: "",
-                    b: "",
-                    c: "",
-                    d: ""
+                    a: "Albus Dumbledore",
+                    b: "Hermione Granger",
+                    c: "Ron Weasley",
+                    d: "Minerva McGonagall"
                 },
-                correctAnswer: ""
+                correctAnswer: "b"
             },
-    15. Here's a harder quote to finish with. 'I have strength enough for this.'
-    
-     Lord Voldemort
-     Professor Snape
-     Professor Quirrell
-     Harry Potter
-      {
-                question: "",
+            {
+                question: "I have strength enough for this.",
                 answers: {
-                    a: "",
-                    b: "",
-                    c: "",
-                    d: ""
+                    a: "Lord Voldemort",
+                    b: "Professor Snape",
+                    c: "Professor Quirrell",
+                    d: "Harry Potter"
                 },
-                correctAnswer: ""
-            },
-            */
+                correctAnswer: "a"
+            }
         ];
 
-        this.play = function () {
-            console.log('HELLO!');
+        var gameQuestions = [];
+        var currQuestion;
+        var qCnt = 0;
+
+        //
+        var main = $('#game-container');
+        var title = $('#title');
+        var questionDiv = $('<div>');
+
+        //
+        var playBtn = $('<button>');
+        playBtn.addClass('btn btn-secondary btn-lg mt-5');
+        playBtn.text('Play Game');
+
+        this.play = init;
+
+        function init() {
+            gameQuestions = rndArr(questions_arr, 10);
+            playBtn.on("click", startGame);
+            main.append(playBtn);
         }
+
+        function rndArr(arr, lgth) {
+            var temp_arr = arr.slice(0, arr.length);
+            var _arr = [];
+            do {
+                var rnd = Math.floor(Math.random() * temp_arr.length);
+                _arr.push(temp_arr[rnd]);
+                temp_arr.splice(rnd, 1);
+            } while (--lgth > 0);
+
+            return _arr;
+        }
+
+        function startGame() {
+            qCnt = 0;
+            main.empty();
+            title.addClass("smaller");
+            buildQuestion();
+        }
+
+        function buildQuestion() {
+            var color = { a: 'primary', b: 'warning', c: 'danger', d: 'success' };
+            var obj = gameQuestions[qCnt++];
+            currQuestion = obj;
+            //
+            var qNum = $('<p>');
+            qNum.text('Question #' + qCnt);
+            qNum.addClass('small pt-3');
+            //
+            var qTxt = $('<p>');
+            qTxt.text('“' + obj.question + '”');
+            qTxt.addClass('q-text');
+            //
+            var row = $('<div>');
+            row.addClass('row no-gutters');
+            $.each(obj.answers, function (key, value) {
+                var col = $('<div>');
+                col.addClass('col-md-6');
+                //
+                var btn = $('<button>');
+                btn.addClass('btn btn-' + color[key] + " btn-lg btn-block");
+                btn.attr('value', key);
+                btn.text(value);
+                btn.on("click", answerBtn);
+                //
+                col.append(btn);
+                row.append(col);
+            });
+            //
+            questionDiv.append(qNum);
+            questionDiv.append(qTxt);
+            questionDiv.append(row);
+            main.append(questionDiv);
+        }
+
+        function answerBtn(e) {
+            var val = $(this).val();
+            console.log(val, currQuestion.correctAnswer);
+            if (val == currQuestion.correctAnswer) {
+                correct();
+            } else {
+                incorrect();
+            }
+        }
+
+        function correct() {
+            console.log('CORRECT');
+            resetQuestion();
+            buildQuestion();
+        }
+
+        function incorrect() {
+            console.log('WRONG');
+            resetQuestion();
+            buildQuestion();
+        }
+
+        function resetQuestion(){
+            questionDiv.empty();
+            main.empty();
+        }
+
+
+
+
     }
 
     var myGame = new PotterTrivia();
