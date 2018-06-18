@@ -8,7 +8,7 @@ html, body{
 
 body{
     background-color:#FF0084;
-    background: url(../images/trivia-bg.jpg);
+    background: url(../images/hp-bg1.jpg);
     font-family: 'Handlee',sans-serif;
     color:#565264;
     display: flex;
@@ -19,14 +19,14 @@ body{
 h1{
     text-align:center;
     font-family: 'Fredericka the Great', cursive;
-    font-size:5rem;
+    font-size:4.75rem;
     color:#565264;
-    padding: 3rem;
+    /* width: 75%; */
 }
 
 h3{
     text-align:center;
-    font-size: 2.25rem;
+    margin-top:1rem;
 }
 
 #box {
@@ -34,25 +34,29 @@ h3{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* width: 400px;
-    height: 200px; */
-    /* color: #FDECEF;
-    font-family: 'Raleway'; */
     font-size: 2.5rem;
-  }
+    max-width:900px;
+}
+
+#game-container {
+    width: 85%;
+    height: 300px;
+}
 
 .outside-border{
-    border: 10px solid white;
+    border: 25px solid #FEF6F7;
     padding: 8px;
     border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
 }
 
 .gradient-border {
     --borderWidth: 10px;
-    background-color:#FFF;
+    background-color:#FEF6F7;
     position: relative;
     border-radius: 0;
   }
+
   .gradient-border:after {
     content: '';
     position: absolute;
@@ -67,7 +71,6 @@ h3{
     animation: animatedgradient 4s ease alternate infinite;
     background-size: 300% 300%;
   }
-  
   
   @keyframes animatedgradient {
       0% {
