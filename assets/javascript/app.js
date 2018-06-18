@@ -2,12 +2,14 @@ $(document).ready(function () {
 
     var PotterTrivia = function (questions_arr) {
 
+        // Arrays
         var gameQuestions = [];
         var currQuestion;
         //
         var winAni = [];
         var loseAni = [];
-        //
+
+        // Numbers + Counters
         var correctCnt = 0;
         var wrongCnt = 0;
         var timedOutCnt = 0;
@@ -15,18 +17,18 @@ $(document).ready(function () {
         var timerCnt = 30;
         var timer;
 
-        //
+        // Elements
         var main = $('#game-container');
         var title = $('#title');
         var timerDiv = $('#timerDiv');
         var timerOut = $('#timer-val');
         var questionDiv = $('<div>');
-
-        //
+        // Play Button
         var playBtn = $('<button>');
         playBtn.addClass('btn btn-secondary btn-lg mt-5');
         playBtn.text('Play Game');
 
+        /* =============  INIT AND SETUP =============== */
         this.play = init;
 
         function init() {
@@ -35,7 +37,8 @@ $(document).ready(function () {
             gameQuestions = winAni = loseAni = [];
             gameQuestions = rndArr(questions_arr, 10);
             playBtn.on("click", startGame);
-            animations();
+            winAni = aniArr('correct');
+            loseAni = aniArr('wrong');
             main.append(playBtn);
         }
 
@@ -60,24 +63,13 @@ $(document).ready(function () {
             return _arr;
         }
 
-        function animations() {
-            winAni = aniArr('correct');
-            console.log(winAni);
-            console.log('------');
-            loseAni = aniArr('wrong');
-            console.log(loseAni);
-        }
 
         function aniArr(str) {
             var _arr = rndNumArr(1, 10);
-            var temp_arr =[];
-                console.log(_arr);
+            var temp_arr = [];
             for (var i = 0; i < _arr.length; i++) {
-                console.log(i, _arr.length);
                 temp_arr.push(str + _arr[i] + '.gif');
-                console.log(temp_arr);
             }
-            
             return temp_arr;
         }
 
@@ -92,6 +84,7 @@ $(document).ready(function () {
             buildQuestion();
         }
 
+        /* ============= QUESTION =============== */
         function buildQuestion() {
             //
             var color = { a: 'primary', b: 'warning', c: 'danger', d: 'success' };
@@ -130,22 +123,30 @@ $(document).ready(function () {
             startTimer();
         }
 
+        // REMOVES VISUAL ELEMENTS OF QUESTION
+        function clearQuestion() {
+            stopTimer();
+            questionDiv.empty();
+            main.empty();
+        }
+
+        // FULL QUESTION RESET
+        function resetQuestion() {
+            clearQuestion();
+            timerCnt = 30;
+            timerDisplay(timerCnt);
+        }
+
+        /* =============  ANSWERS =============== */
         function answerBtn(e) {
-            var val = $(this).val();
-            console.log(val, currQuestion.correctAnswer);
-            showAnswer(val == currQuestion.correctAnswer);
+            showAnswer($(this).val() == currQuestion.correctAnswer);
         }
 
         function showAnswer(val) {
-            console.log(val);
             clearQuestion();
             if (val) {
-                console.log("WIN");
-                
                 main.append(buildAni(val, winAni));
             } else {
-                console.log("LOSE");
-                
                 main.append(buildAni(val, loseAni));
             }
             // 
@@ -158,21 +159,8 @@ $(document).ready(function () {
             }, 3500);
         }
 
-        function resetQuestion() {
-            clearQuestion();
-            timerCnt = 30;
-            timerDisplay(timerCnt);
-        }
-
-        function clearQuestion() {
-            stopTimer();
-            questionDiv.empty();
-            main.empty();
-        }
-
-        //
+        // ANIMATION
         function buildAni(isWin, _arr) {
-            console.log(isWin, _arr);
             var aniDiv = $('<div>');
             var h3 = $('<h3>');
             var p = $('<h6>');
@@ -201,28 +189,16 @@ $(document).ready(function () {
             return aniDiv;
         }
 
-        //
+        /* =============  RESULTS PAGE =============== */
         function resultsPage() {
             resetQuestion();
             timerDiv.addClass('d-none');
-            var h3 = $('<h3>');
-            h3.text("Trivius Totalis!  Here's how you did:");
-            var h51 = $('<h5>');
-            h51.text("Correct: " + correctCnt);
-            var h52 = $('<h5>');
-            h52.text("Incorrect: " + wrongCnt);
-            var h53 = $('<h5>');
-            h53.text("Unanswered: " + timedOutCnt);
-            //
-            main.append(h3);
-            main.append(h51);
-            main.append(h52);
-            main.append(h53);
+            main.html("<h3>Trivius Totalis!  Here's how you did:</h3>  <h5>Correct: " + correctCnt+"</h5>   <h5>Incorrect: " + wrongCnt+"</h5>   <h5>Unanswered: " + timedOutCnt+"</h5> ");
             playBtn.text('Play Again?');
             init();
         }
 
-        //
+        /* =============  TIMER =============== */
         function startTimer() {
             timer = setInterval(countdown, 1000);
         }
@@ -243,11 +219,11 @@ $(document).ready(function () {
             timerOut.text(str);
         }
 
-
-
+        // END POTTERTRIVIA
 
     }
 
+    // Questions for game
     var questions = [
         {
             question: "That's why you're famous. That's why everybody knows your name. You're the boy who lived.",
@@ -400,6 +376,8 @@ $(document).ready(function () {
             correctAnswer: "a"
         }
     ];
+
+    // Instantiate PotterTrivia
     var myGame = new PotterTrivia(questions);
     myGame.play();
 
