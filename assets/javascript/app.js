@@ -87,6 +87,7 @@ $(document).ready(function () {
             timerDisplay(timerCnt);
             main.empty();
             title.addClass("smaller");
+            $('#instr').addClass('d-none');
             timerDiv.removeClass('d-none');
             buildQuestion();
         }
@@ -98,7 +99,7 @@ $(document).ready(function () {
             currQuestion = obj;
             //
             var qNum = $('<p>');
-            qNum.text('Question #' + qCnt);
+            qNum.text('Quote #' + qCnt);
             qNum.addClass('small pt-3');
             //
             var qTxt = $('<p>');
